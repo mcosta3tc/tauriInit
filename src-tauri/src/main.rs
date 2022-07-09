@@ -6,6 +6,13 @@ windows_subsystem = "windows"
 use tauri::Manager;
 use window_vibrancy::{apply_vibrancy, NSVisualEffectMaterial};
 
+#[tauri::command]
+fn my_custom_command() -> String {
+  use mkpasswd::mkpasswd;
+  mkpasswd().into()
+}
+
+
 fn main() {
   let context = tauri::generate_context!();
 
@@ -21,6 +28,7 @@ fn main() {
     } else {
       tauri::Menu::default()
     })
+    .invoke_handler(tauri::generate_handler![my_custom_command])
     .run(context)
     .expect("error while running tauri application");
 }

@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
-@Component({
+@Component( {
   selector: 'app-main-container',
   templateUrl: './main-container.component.html',
-  styleUrls: ['./main-container.component.scss']
-})
+  styleUrls: [ './main-container.component.scss' ],
+  providers: []
+} )
 export class MainContainerComponent implements OnInit {
 
   constructor() { }

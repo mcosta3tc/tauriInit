@@ -7,12 +7,12 @@ import { Component, OnInit } from '@angular/core';
 } )
 export class MainCardComponent implements OnInit {
 
-  test = "Créez des mots de passe forts et sûrs pour garantir la sécurité de vos comptes web";
 
   constructor() {
   }
 
   ngOnInit(): void {
+
   }
 
 }
